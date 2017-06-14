@@ -1,0 +1,21 @@
+
+FROM httpd:latest
+
+WORKDIR /usr/local/apache2/htdocs
+
+EXPOSE 80
+
+# installation de git
+# && git clone https://github.com/helfi92/studorlio.git .
+RUN apt-get update && apt-get install -y git && rm index.html 
+
+# installation Vim
+RUN apt-get install -y vim
+
+# installation php5 
+
+RUN apt-get install -y php5
+
+
+
+
